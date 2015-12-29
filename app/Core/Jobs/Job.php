@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Jobs;
+namespace Matrix\Core\Jobs;
 
 use Illuminate\Bus\Queueable;
 

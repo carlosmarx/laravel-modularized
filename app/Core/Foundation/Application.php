@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Foundation;
+namespace Matrix\Core\Foundation;
 
 use Illuminate\Foundation\Application as LaravelApplication;
 
