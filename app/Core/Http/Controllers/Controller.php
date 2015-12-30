@@ -10,4 +10,18 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    protected $viewNameSpace = '';
+
+    protected function view($view = null, $data = [], $mergeData = []){
+
+        if(!empty($this->viewNameSpace) && !str_contains($view, '::')){
+
+            $view = $this->viewNameSpace.$view;
+
+        }
+
+        return view($view, $data, $mergeData);
+
+    }
 }

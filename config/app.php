@@ -151,12 +151,13 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Core\Providers\AppServiceProvider::class,
-        App\Core\Providers\AuthServiceProvider::class,
-        App\Core\Providers\EventServiceProvider::class,
-        App\Core\Providers\RouteServiceProvider::class,
+        Matrix\Core\Providers\AppServiceProvider::class,
+        Matrix\Core\Providers\AuthServiceProvider::class,
+        Matrix\Core\Providers\EventServiceProvider::class,
+        Matrix\Core\Providers\RouteServiceProvider::class,
 
-        App\Applications\Api\ApiServiceProvider::class,
+        Matrix\Applications\Api\ApiServiceProvider::class,
+        Matrix\Applications\Site\Providers\SiteServiceProvider::class,
 
     ],
 

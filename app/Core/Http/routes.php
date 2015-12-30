@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    return factory(\Matrix\Domains\Users\User::class)->create();
-});
+//Route::get('/', function () {
+//    // return view('welcome');
+//    return factory(\Matrix\Domains\Users\User::class)->create();
+//});
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +27,6 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+//Route::group(['middleware' => ['web']], function () {
+//    //
+//});

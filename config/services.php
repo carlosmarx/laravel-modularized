@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => Matrix\User::class,
+        'model'  => Matrix\Domains\Users\User::class,
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
