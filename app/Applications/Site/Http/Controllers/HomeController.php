@@ -2,16 +2,19 @@
 
 namespace Matrix\Applications\Site\Http\Controllers;
 
-use Matrix\Domains\Users\User;
+use Matrix\Domains\Users\UsersRepository;
+
 /**
 * UsersController for Api
 */
 class HomeController extends BaseController
 {
 
-  public function index(){
+  public function index(UsersRepository $users){
 
-    return $this->view('home');
+    $users = $users->getAll(false, null);
+
+    return $this->view('home', compact('users'));
 
   }
 

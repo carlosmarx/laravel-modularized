@@ -2,16 +2,30 @@
 
 namespace Matrix\Applications\Api\Http\Controllers;
 
-use Matrix\Domains\Users\User;
+use Matrix\Domains\Users\UsersRepository;
+
 /**
 * UsersController for Api
 */
+
+
+
 class UsersController extends BaseController
 {
 
+  /**
+   * @param UsersRepository $users
+   */
+  public function __construct(UsersRepository $users)
+  {
+
+    $this->users = $users;
+
+  }
+
   public function index(){
 
-    return User::query()->get();
+    return $this->users->getAll(true, 10);
 
   }
 
